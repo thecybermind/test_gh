@@ -40,6 +40,7 @@ C_DLLEXPORT void GolfHook_Query(plugin_info** plugininfo, plugin_funcs** pluginf
 
 
 C_DLLEXPORT bool GolfHook_Attach() {
+	GH_WRITEGHLOG(GHLOG_INFO, "Test plugin loaded!\n");
 	return true;
 }
 
