@@ -13,8 +13,8 @@ Created By:
 #include <windows.h>
 #include <string>
 
-#include <aetherim.hpp>
 #include <ghapi.hpp>
+#include <il2cpp.hpp>
 
 #include "main.hpp"
 #include "version.h"
@@ -41,10 +41,18 @@ C_DLLEXPORT void GolfHook_Query(plugin_info** plugininfo, plugin_funcs** pluginf
 
 C_DLLEXPORT bool GolfHook_Attach() {
 	GH_WRITEGHLOG(GHLOG_INFO, "Test plugin loaded!\n");
+	auto chat = GH_ASSEMBLY->get_class("ChatSessionMessageData");
+	GH_WRITEGHLOG(GHLOG_INFO, "ChatSessionMessageData %p\n", chat);
+	for (auto& f : chat->get_fields()) {
+		if (!f || !f->get_name())
+			continue;
+		GH_WRITEGHLOG(GHLOG_INFO, "ChatSessionMessageData Field: %s\n", f->get_name());
+	}
+
 	return true;
 }
 
 
 C_DLLEXPORT void GolfHook_Detach() {
-    // nothing
+	GH_WRITEGHLOG(GHLOG_INFO, "Test plugin unloaded!\n");
 }
