@@ -54,17 +54,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <PropertyGroup>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\include</IncludePath>
     <SourcePath>$(VC_SourcePath);..\src</SourcePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\..\golfhook\vendor;..\..\golfhook\include</ExternalIncludePath>
-    <OutDir>..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>..\obj\$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\include</IncludePath>
-    <SourcePath>$(VC_SourcePath);..\src</SourcePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\..\golfhook\vendor;..\..\golfhook\include</ExternalIncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\..\golfhook\include</ExternalIncludePath>
     <OutDir>..\bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>..\obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
