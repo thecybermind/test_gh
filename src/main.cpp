@@ -41,7 +41,7 @@ C_DLLEXPORT bool GolfHook_Attach() {
 	GH_WRITEGHLOG(GHLOG_INFO, "Test plugin loaded!\n");
 	auto chat = GH_ASSEMBLY->get_class("ChatSessionMessageData");
 	GH_WRITEGHLOG(GHLOG_INFO, "ChatSessionMessageData %p %d\n", chat, chat->get_field_count());
-	for (auto& f : chat->get_fields()) {
+	for (auto f : chat->get_fields()) {
 		if (!f || !f->get_name())
 			continue;
 		GH_WRITEGHLOG(GHLOG_INFO, "ChatSessionMessageData Field: %s\n", f->get_name());
