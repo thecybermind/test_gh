@@ -30,11 +30,11 @@ plugin_info g_plugininfo = {
 	"https://github.com/thecybermind/test_gh",	// website of plugin
 	"TEST",										// logtag of plugin
 };
-plugin_funcs g_pluginfuncs;
-plugin_vars g_pluginvars;
+plugin_funcs* g_pluginfuncs;
+plugin_vars* g_pluginvars;
 
 
-C_DLLEXPORT void GolfHook_Query(plugin_info** plugininfo, plugin_funcs** pluginfuncs, plugin_vars** pluginvars) {
+C_DLLEXPORT void GolfHook_Query(plugin_info** plugininfo, plugin_funcs* pluginfuncs, plugin_vars* pluginvars) {
     GH_GIVE_PTRS();
 }
 
