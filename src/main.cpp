@@ -9,12 +9,10 @@ Created By:
 
 */
 
-#define WIN32_LEAN_AND_MEAN
-#include <windows.h>
+
 #include <string>
 
 #include <ghapi.hpp>
-#include <il2cpp.hpp>
 
 #include "main.hpp"
 #include "version.h"
@@ -27,7 +25,7 @@ plugin_info g_plugininfo = {
 	TEST_GH_VERSION,							// version of plugin
 	"Test plugin",								// description of plugin
 	TEST_GH_BUILDER,							// author of plugin
-	"https://github.com/thecybermind/test_gh",	// website of plugin
+	"https://github.com/thecybermind/test_gh/", // website of plugin
 	"TEST",										// logtag of plugin
 };
 plugin_funcs* g_pluginfuncs;
